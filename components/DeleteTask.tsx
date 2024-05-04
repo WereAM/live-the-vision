@@ -11,7 +11,8 @@ export default async function DeleteTask ({}) {
   return (
     <div>
         <form action={'deleteTask'}>
-            <input type='hidden' name="id" value={todo.id} />
+            {/* <input type='hidden' name="id" value={todo.id} /> */}
+            <input type='hidden' name="id" />
             <Button type='submit'>
                 Delete
             </Button>

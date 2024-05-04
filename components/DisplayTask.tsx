@@ -14,7 +14,7 @@ export default async function DisplayTask() {
     return (
         <>
           <p> {JSON.stringify(todos)}</p>
-          {
+          {/* {
             todos.map((todo) => (
               <div key={todo.id}>
                 <p>{todo.task}</p>
@@ -24,7 +24,7 @@ export default async function DisplayTask() {
                 </div>
               </div>
             ))
-          }
+          } */}
         </>  
     );
 }
