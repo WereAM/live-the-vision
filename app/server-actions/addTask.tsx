@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 
 export async function addTask(formData: FormData) {
 
-    const id = formData.get('id');
+    // const id = formData.get('id');
     const  title = formData.get('title');
     const  priority = formData.get('priority');
     const  createdAt = formData.get('createdAt');
@@ -12,11 +12,11 @@ export async function addTask(formData: FormData) {
 
     const supabase = createClient();
 
-    const { data : todos } = await supabase
+    const { data } = await supabase
         .from('todos')
         .insert([
             {
-                id,
+                // id,
                 title,
                 priority,
                 createdAt,
@@ -25,4 +25,6 @@ export async function addTask(formData: FormData) {
         ])
     
     revalidatePath('/todos');
+
+    return data;
 }
