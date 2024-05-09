@@ -24,7 +24,7 @@ export async function addTask(formData: FormData) {
             }
         ])
     
-    revalidatePath('/todos');
+    revalidatePath('/todo');
 
     return data;
 }
